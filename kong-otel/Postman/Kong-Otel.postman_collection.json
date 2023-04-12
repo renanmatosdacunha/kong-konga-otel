@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "5c9177ec-4c0b-4628-9c8a-2551f291c915",
+		"name": "Kong-Otel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"opentelemetry\",\n    \"config\": {\n        \"endpoint\": \"http://otel-collector:4318/v1/traces\",\n        \"resource_attributes\": {\n            \"service.name\": \"kong-otel\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/plugins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"plugins"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
